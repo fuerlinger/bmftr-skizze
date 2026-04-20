@@ -150,21 +150,21 @@ Messungen von Qubits sind ein zentrales Instrument in vielen Bereichen
 des Quantencomputings: So werden Quantenalgorithmen zwar meistens als
 unitäre Gatteroperationen in einem Schaltkreis dargestellt, um diese
 jedoch auf tatsächlicher Quantenhardware zu realisieren werden
-Fehlerkorrekturmechanismen benötigt (QEC) welche auf kontinuierlichen
-Multi-Qubit Messungen basieren. Desweiteren gibt es mit
+Fehlerkorrekturmechanismen benötigt (QEC), welche auf kontinuierlichen
+Multi-Qubit Messungen basieren. Des Weiteren gibt es mit
 Measurement-based Quantum Computing (MBQC) und Fusion-based Quantum
 Computing (FBQC) zwei vielversprechende alternative Rechenmodelle in
-welchen Operationen ausschließlich über Single oder Multi-Qubit
-Messungen erfolgen. Diese Modelle stoßen derzeit vor allem im Bereich
-des photonischen Quantencomputings auf großes Interesse, da sie auf
-photonischer Hardware ressourceneffizienter implementiert werden
-können als das übliche gatterbasierte Modell. Alle drei Ansätze (MBQC,
-FBQC, QEC) weisen untereinander starke Ähnlichkeiten auf, z.B. die
-klassische Korrektur nicht-deterministischer Messungen mittels Pauli
-Operationen oder eine graphenbasierte Repräsentation über den
-Stabilizer Formalismus, und werden im Folgenden als Measurement-driven
-Quantum Computing (MDQC) zusammengefasst.  Während es für
-gatterbasiertes Quantencomputing bereits viele programmatische
+welchen Operationen ausschließlich über Einzel- oder
+Mehrqubit-Messungen erfolgen. Diese Modelle stoßen derzeit vor allem
+im Bereich des photonischen Quantencomputings auf großes Interesse, da
+sie auf photonischer Hardware ressourceneffizienter implementiert
+werden können als das übliche gatterbasierte Modell. Alle drei Ansätze
+(MBQC, FBQC, QEC) weisen untereinander starke Ähnlichkeiten auf,
+z.B. die klassische Korrektur nicht-deterministischer Messungen
+mittels Pauli Operationen oder eine graphenbasierte Repräsentation
+über den Stabilizer Formalismus, und werden im Folgenden als
+Measurement-driven Quantum Computing (MDQC) zusammengefasst.  Während
+es für gatterbasiertes Quantencomputing bereits viele programmatische
 Entwicklungstools gibt, um Quantenalgorithmen zu designen und
 Schaltkreise zu simulieren, optimieren oder verifizieren, ist der
 Stand der Technik bei Measurement-driven Quantum Computing noch
@@ -172,7 +172,7 @@ deutlich eingeschränkter. Wie wichtig jedoch solche Tools für die
 Forschung sind, zeigt sich zum Beispiel anhand der von IBM
 entwickelten „qiskit“ Bibliothek, welche zu einem de-facto Standard im
 Bereich des gatterbasierten Quantencomputings geworden
-ist. Insbesondere der umkomplizierte Zugang zu Simulations und
+ist. Insbesondere der unkomplizierte Zugang zu Simulations- und
 Visualisierungsmethoden ist sowohl im Bereich der Forschung als auch
 in der Lehre enorm hilfreich.
 
@@ -182,16 +182,16 @@ schließen.  Konkret soll dabei eine open-source Operationsbibliothek
 für MDQC erstellt werden, sowie daran angebunden ein graphischer
 Editor zur Visualisierung und zum Design von Quantenalgorithmen. Beide
 Komponenten sollen darauf ausgelegt sein möglichst performant zu
-funktionieren auch im Hinblick auf eine steigende Anzahl an Qubits.
+funktionieren, auch im Hinblick auf eine steigende Anzahl an Qubits.
 
 Unsere Lösung ist primär an Forschungseinrichtungen
 bzw. forschungsnahe Unternehmen im Bereich der Quantensoftware
 gerichtet. Denkbare Anwendungsgebiete umfassen unter anderem Design,
-Optimierung und Kompilierung fehlerkorrigierender Codes, photonischen
+Optimierung und Kompilierung fehlerkorrigierender Codes, photonischer
 Quantenberechnungen oder Quantennetzwerke.  Die Zusammenführung und
-Abstraktion unterschiedlicher Rechenmodelle kombiniert mit einer
-interaktiven Visualisierungs- und Simulationsumgebung bietet hierbei
-einen neuwertigen Ansatz, der in dieser Form noch nicht existiert.
+Abstraktion unterschiedlicher Rechenmodelle mit einer interaktiven
+Visualisierungs- und Simulationsumgebung bietet hierbei einen
+neuwertigen Ansatz, der in dieser Form noch nicht existiert.
 
 
 
@@ -373,12 +373,14 @@ abgedeckt wird.  All diesen Ansätzen ist gemeinsam, dass sie nur einen
 kleinen Teil des Lösungsraumes abdecken und nicht universell
 sind. Diese Ansätze überlappen sich nicht notwendigerweise, es gibt
 also Probleme die im Clifford-Modell effizient beschrieben sind, für
-die es aber keine Formulierung im Ising-Modell gibt.  Für die
-Fehlerkorrektur gibt es ebenfalls einige Ansätze Existierende Ansätze
-Fehlerkorrektur: - https://mqt.readthedocs.io/projects/qecc/en/latest/
-- https://simulations4all.com/simulations/quantum-error-correction
-FBQC: - Nichts MBQC: - https://graphix.readthedocs.io/
-Schaltkreismodell: - https://qiskit.org/
+die es aber keine Formulierung im Ising-Modell gibt.
+
+Für die Fehlerkorrektur gibt es ebenfalls einige Ansätze Existierende
+Ansätze Fehlerkorrektur: -
+https://mqt.readthedocs.io/projects/qecc/en/latest/ -
+https://simulations4all.com/simulations/quantum-error-correction FBQC:
+- Nichts MBQC: - https://graphix.readthedocs.io/ Schaltkreismodell: -
+https://qiskit.org/
 
 
 
@@ -412,12 +414,12 @@ Der Lösungsansatz soll die Berechnung von Quantenoperationen auf
 Messungsbasis ermöglichen. Dazu wird eine entsprechende
 Simulationsumgebung entwickelt. Ein solcher Ansatz existiert bisher
 nicht. Mit einer Simulationssoftware lassen sich die
-quantenmechanischen Eigenschaften von messungsbasierten Quantenrechnen
-erforschen. Damit wird ein tieferes Verständnis ermöglicht und der
-Entwicklung neuer Quantenalgorithmen stattgegeben.
+quantenmechanischen Eigenschaften von messungsbasierten
+Quantenrechnern erforschen. Damit wird ein tieferes Verständnis
+ermöglicht und der Entwicklung neuer Quantenalgorithmen stattgegeben.
 
 Die Schwierigkeit in der Simulation rührt entscheidend von dem
-Wachstum des Zustandsraum. Mit dem Messungsbasierten Quantenrechnen
+Wachstum des Zustandsraumes. Mit dem Messungsbasierten Quantenrechnen
 kann das Wachstum des Raumes dynamisch gestaltet werden, da die
 Messung eines Qubits den Raum wieder in seiner Größe reduziert. Mit
 dieser Dynamik kann der Quantenzustand während der Messung so
@@ -425,7 +427,7 @@ dimensioniert werden, dass dieser noch in den Speicher des klassischen
 Rechners passt.
 
 Der Bereich des Lösungsraumes, der mit diesem Ansatz effizient
-abgedeckt werden kann umfasst nicht den gesamten Lösungsraum. Dieser
+abgedeckt werden kann, umfasst nicht den gesamten Lösungsraum. Dieser
 kann abgedeckt werden, allerdings mit dem gleichen Simulationsaufwand
 wie in der normalen Matrixsimulation.  Mit dem messungsbasierten
 Quantenrechnen können jedoch Anwendungen abgedeckt werden, die im
@@ -435,32 +437,33 @@ sind. Insbesondere die Fehlerkorrektur, die wesentlich auf
 Fehlermessungen basiert, kann mit messungsbasiertem Quantenrechnen
 genau erforscht werden.
 
-Hier setzt unser Ansatz an und baut die dafür notwendige
+Unser Ansatz setzt hier an und baut die dafür notwendige
 Software. Unter anderem die genaue Kontrolle von Messungen und
--parametern unterstützt die gegenwärtige und zukünftige Forschung an
-diesem Themen. Die exakte Darstellung des Quantenzustands unter
+Parametern unterstützt die gegenwärtige und zukünftige Forschung an
+diesen Themen. Die exakte Darstellung des Quantenzustands unter
 Fehlern und deren Korrektur unter Messungen trägt genauso zur
 Weiterentwicklung von Fehlerkorrektur und Fehlertoleranz bei.
 
-Anwendungsfälle FBQC: Eine zentrale Herausforderung bei photonischem
-Quantencomputing ist die Realisierung von Verschränkung zwischen
-Photonen in sogenannten Graph states. Diese kann in Teilen bereits
-deterministisch bei der Erzeugung der Photonen über Quantenemitter wie
-z.B. Quantenpunkte realisiert werden, jedoch ist der Grad dieser
-Verschränkung nicht ausreichend für universelles Quantencomputing. Um
-beliebige Graph states zu erzeugen, benötigt man Multi-Qubit Messungen
-(Fusions) welche nicht-deterministisch Photonen verschränken. Die
-Möglichkeiten mit unterschiedlichen Fusions unterschiedliche
-Verschränkungen zu erzeugen sind bislang noch nicht ausführlich
-erforscht. Ein visueller Editor würde es erleichtern mit diesen
-Messungen zu rechnen und deren Effekte graphisch zu untersuchen,
-z.B. um optimierte ressourcengünstige Abfolgen an Fusions zu finden,
-um einen bestimmten Graph state zu erzeugen
+Anwendungsfälle FBQC: 
+
+Eine zentrale Herausforderung bei photonischem Quantencomputing ist
+die Realisierung von Verschränkung zwischen Photonen in sogenannten
+Graph States. Diese kann in Teilen bereits deterministisch bei der
+Erzeugung der Photonen über Quantenemitter wie z.B. Quantenpunkte
+realisiert werden, jedoch ist der Grad dieser Verschränkung nicht
+ausreichend für universelles Quantencomputing. Um beliebige Graph
+States zu erzeugen, benötigt man Mehrqubit-Messungen (Fusions), welche
+nicht-deterministisch Photonen verschränken. Die Möglichkeiten mit
+unterschiedlichen Fusions unterschiedliche Verschränkungen zu erzeugen
+sind bislang noch nicht ausführlich erforscht. Ein visueller Editor
+würde es erleichtern mit diesen Messungen zu rechnen und deren Effekte
+graphisch zu untersuchen, z.B. um optimierte ressourcengünstige
+Abfolgen an Fusions zu finden, um einen bestimmten Graph State zu
+erzeugen.
 
 Im Rahmen des Open Innovation Ansatzes stellt die quelloffene
 Entwicklung und kostenfreie Bereitstellung die weitere Verwertung und
 den Beitrag zur Forschung sicher.
-
 
 \section{Beschreibung des Arbeitsplans}
 
@@ -566,8 +569,8 @@ Schaltkreise und Lösungsansätze graphisch geteilt werden können.
 Im Kontext des Open Innovation Ansatzes ist eine quelloffene
 Weitergabe des Programms zur Weiterentwicklung von Komponenten ein
 Ziel. Damit wird auch sichergestellt, dass die Software stets an den
-gegenwärtigen Forschungsstand angepasst werden kann.
-
+gegenwärtigen Forschungsstand angepasst werden kann und nach
+Projektende die Möglichkeit zur Weiterführung besteht.
 
 \section{Finanzierungsplan}
 
@@ -581,7 +584,7 @@ für die Jahre 2027-2029 die uns von der zentralen Verwaltung der LMU
 München bereitgestellt wurden.
 
 Für die Reisekosten planen wir mit zwei internationalen Reisen pro
-Projektjahr.
+Projektjahr sowie zwei Reisen innerhalb Deutschlands.
 
 \instruction{Bitte die Anlage ausfüllen und als separate Datei in
   elektronischer Form zusammen mit der Skizze einreichen. Bitte machen
